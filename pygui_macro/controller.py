@@ -41,7 +41,7 @@ class Controller:
 
     @classmethod
     def key_release(cls, key):
-        if key in keyboard.Key:
+        if key in keyboard.Key.__dict__:
             cls.keyboard_controller.release(keyboard.Key[key])
         else:
             cls.keyboard_controller.release(key)
